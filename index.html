@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAD project</title>
+    <link rel="stylesheet" href="Styles.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+
+
+
+
+
+</head>
+<style media="screen">
+    .carousel-cell {
+        width: 100%;
+    }
+    /* cell number */
+    
+    .carousel-cell:before {
+        display: block;
+    }
+</style>
+
+
+<body>
+    <a class="box" action="login.html" method="post"> </a>
+    <div class="wrapper">
+        <nav>
+            <input type="checkbox" id="show-search">
+            <input type="checkbox" id="show-menu" onclick="display()">
+            <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
+            <div class="content">
+                <div class="logo"><a href="#"> BVCOEW </a></div>
+                <ul class="links">
+                    <li><a href="#HOME" class="active" title="Home"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"/>
+              </svg> Home</a></li>
+
+                    <li><a href="#VISION" title="On Radar"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-award-fill" viewBox="0 0 16 16">
+                <path d="m8 0 1.669.864 1.858.282.842 1.68 1.337 1.32L13.4 6l.306 1.854-1.337 1.32-.842 1.68-1.858.282L8 12l-1.669-.864-1.858-.282-.842-1.68-1.337-1.32L2.6 6l-.306-1.854 1.337-1.32.842-1.68L6.331.864 8 0z"/>
+                <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1 4 11.794z"/>
+              </svg> Vision</a></li>
+                    <li>
+                        <a href="#ELEMENTS" title="Elements"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-folder-plus" viewBox="0 0 16 16">
+                    <path d="m.5 3 .04.87a1.99 1.99 0 0 0-.342 1.311l.637 7A2 2 0 0 0 2.826 14H9v-1H2.826a1 1 0 0 1-.995-.91l-.637-7A1 1 0 0 1 2.19 4h11.62a1 1 0 0 1 .996 1.09L14.54 8h1.005l.256-2.819A2 2 0 0 0 13.81 3H9.828a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 6.172 1H2.5a2 2 0 0 0-2 2zm5.672-1a1 1 0 0 1 .707.293L7.586 3H2.19c-.24 0-.47.042-.683.12L1.5 2.98a1 1 0 0 1 1-.98h3.672z"/>
+                    <path d="M13.5 10a.5.5 0 0 1 .5.5V12h1.5a.5.5 0 1 1 0 1H14v1.5a.5.5 0 1 1-1 0V13h-1.5a.5.5 0 0 1 0-1H13v-1.5a.5.5 0 0 1 .5-.5z"/>
+                  </svg>Study Material</a></li>
+
+                    <li><a href="#DEVELOPERS" title="Developers"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+                    <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                    <path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"/>
+                    <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
+                  </svg> About us</a></li>
+
+                    <li>
+                        <a href="#CONTACTS" title="Contacts"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                  </svg>Our channels</a>
+                        <input type="checkbox" id="show-services">
+                        <label for="show-services"></label>
+
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div><br><br><br><br>
+
+    <div class="top-container">
+
+        <table>
+            <tr>
+                <a name="HOME"></a>
+                <td><img src="Images/bvcoewlogo.jpg" alt=""></td>
+                <td>
+                    <h1>BHARATI VIDYAPEETH'S COLLEGE OF ENGINEERING FOR WOMEN</h1>
+                </td>
+
+            </tr>
+        </table>
+        <a name="VISION"></a>
+
+
+
+    </div>
+
+
+    <div class="2-container">
+
+
+        <img class="visionss" src="Images/visionmission.jpg" alt="">
+        <a name="VISION"></a>
+    </div>
+    </div>
+
+
+
+
+
+
+
+    </div>
+    </div>
+
+    <div id="image">
+        <div class="carousel" data-flickity='{ "wrapAround": true, "autoPlay": true, "imagesLoaded":true }'>
+            <a name="ELEMENTS"></a>
+            <div class="carousel-cell">
+                <table>
+                    <tr>
+
+                        <td><img src="Images/books.jpg" alt=""></td>
+                        <td>
+                            <h2>Actual books/Notes</h2>
+                            <h3>Getting Stuck At Concept?</h3>
+                            <a href="pdf.html">Clear it Now!!!!</a></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="carousel-cell">
+
+                <table>
+                    <tr>
+                        <td><img src="Images/yt2.png" alt=""></td>
+                        <td>
+                            <h2>Youtube Links</h2>
+                            <h3>Want Conceptual Clarity Through Visualization?</h3>
+                            <a href="YT LINKS.pdf">Do it Here!!!!</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="carousel-cell">
+
+                <table>
+                    <tr>
+                        <td><img src="Images/quiz.jpg" alt=""></td>
+                        <td>
+                            <h2>Quiz </h2>
+                            <h3>Achieve Grip on your learned concpts!!!</h3>
+                            <a href="quizes.html">
+                                <p>Practise what you have learned</p>
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+
+
+
+
+
+        <br>
+        <hr>
+
+
+
+        <a name="DEVELOPERS"></a>
+        <div class="team">
+            <div class="container">
+                <div class="card">
+                    <div class="content">
+                        <div class="imgBx">
+                            <img src="Images/sneha.jpeg" alt="">
+                        </div>
+                        <div class="contentBx">
+                            <h4>Sneha Birajdar</h4>
+                            <h5>Developer</h5>
+                        </div>
+                        <div class="sci">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="content">
+                        <div class="imgBx">
+                            <img src="Images/priyanka.jpeg" alt="">
+                        </div>
+                        <div class="contentBx">
+                            <h4>Priyanka Jadhav</h4>
+                            <h5>Developer</h5>
+                        </div>
+                        <div class="sci">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="content">
+                        <div class="imgBx">
+                            <img src="Images/komal.jpeg" alt="">
+                        </div>
+                        <div class="contentBx">
+                            <h4>Komal Patil</h4>
+                            <h5>Developer</h5>
+                        </div>
+                        <div class="sci">
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="card">
+                    <div class="content">
+                        <div class="imgBx">
+                            <img src="Images/sonakshi.jpg" alt="">
+                        </div>
+                        <div class="contentBx">
+                            <h4>Sonakshi Shende</h4>
+                            <h5>Developer</h5>
+                        </div>
+                        <div class="sci">
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <!-- </div> -->
+
+    <div class="container">
+        <a name="CONTACTS"></a>
+        <span class="big-circle"></span>
+        <img src="img/shape.png" class="square" alt="" />
+        <div class="form">
+            <div class="contact-info">
+                <h3 class="title">Contact Us</h3>
+                <p class="text">
+                    Bharati vidyapeeth's College of Engineering for Women
+                </p>
+
+                <div class="info">
+                    <div class="information">
+                        <img src="img/location.png" class="icon" alt="" />
+                        <p>Bharati Vidyapeeth University, Katraj, Pune, Maharashtra 411043</p>
+                    </div>
+                    <div class="information">
+                        <img src="img/email.png" class="icon" alt="" />
+                        <p>Email: coewpune@bharatividyapeeth.edu</p>
+                    </div>
+                    <div class="information">
+                        <img src="img/phone.png" class="icon" alt="" />
+                        <p>+91 020-24371684
+                        </p>
+                    </div>
+                </div>
+
+                <div class="social-media">
+                    <p>Connect with us :</p>
+                    <div class="social-icons">
+                        <a href="https://m.facebook.com/bvcoewpu/">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+
+                        <a href="https://mobile.twitter.com/bharati_vp?lang=en">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.instagram.com/bvcoew_pune/?utm_medium=copy_link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/school/bharati-vidyapeeths-college-of-engineering-for-women-pune">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <span class="circle one"></span>
+                <span class="circle two"></span>
+
+                <form action="index.html" autocomplete="off">
+                    <h3 class="title">Contact us</h3>
+                    <div class="input-container">
+                        <input type="text" name="name" class="input" placeholder="Username" />
+
+                    </div>
+                    <div class="input-container">
+                        <input type="email" name="email" class="input" placeholder="Email" />
+
+                    </div>
+                    <div class="input-container">
+                        <input type="tel" name="phone" class="input" />
+                        <label for="">Phone</label>
+                        <span>Phone</span>
+                    </div>
+                    <div class="input-container textarea">
+                        <textarea name="message" class="input"></textarea>
+                        <label for="">Message</label>
+                        <span>Message</span>
+                    </div>
+                    <input type="submit" value="Send" class="btn" />
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+
+    <div>
+
+        <p>© 2021 1C42021</p>
+    </div>
+    </div>
+
+
+    <script>
+        function display() {
+            let check = document.getElementById("show-menu");
+            if (check.checked) {
+                var image = document.getElementById("image");
+                image.style.display = "none";
+            } else {
+                var image = document.getElementById("image");
+                image.style.display = "block";
+
+            }
+        }
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+
+
+
+</body>
+
+</html>
